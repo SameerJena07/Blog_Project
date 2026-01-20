@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 .container{
-    max-width: 95vw;
+    max-width: 80vw;
     padding: 2rem 1rem;
     margin: 0 auto;
     /* background-color: aqua; */
@@ -41,20 +41,45 @@ a {
 .main_container{
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(4 fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 935px){
+    .main_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1220px){
+    .main_container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1500px){
+    .main_container{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .card_container{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(111, 109, 109);
-    border-radius: 2px;
+    border: 1px solid rgb(193, 187, 187);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .card_image_container{
     position: relative;
     overflow: hidden;
-    height: 14rem;
+    height: 7rem;
+}
+
+@media (min-width: 768px){
+    .card_image_container{
+        height: 12rem;
+    }
 }
 
 .card_image{
@@ -96,7 +121,9 @@ a {
 .card_footer_container{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 0 1rem;
+    padding-bottom: 1.5rem;
+    align-items: flex-end;
 }
 
 .author_container{
@@ -129,10 +156,10 @@ a {
 }
 
 .card_tag_container{
-    font-size: 0.9rem;
-    border: 1px solid rgb(76, 71, 71);
-    border-radius: 2px;
+    font-size: 0.8rem;
+    border: 1px solid rgb(122, 118, 118);
+    border-radius: 4px;
     line-height: 1.3rem;
     padding: 0.25rem 0.5rem;
-    color: rgb(76, 71, 71);
+    color: rgb(121, 116, 116);
 }
